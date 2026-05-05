@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gourmet - Taste the World | Menu</title>
+    <link rel="stylesheet" href="menu.css"/>
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <style>
+        body::before { height: 895px; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo"><h1>GOURMET</h1></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="dev" href="menu.html">Menu</a></li>
+            <li><a href="book-table.html">Book table</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href='cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">Light Theme Off</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <article class="tt">
+        <h3>Koshari</h3>
+        <p>Egypt's national dish — a hearty mix of rice, lentils, macaroni, and crispy onions topped with spiced tomato sauce. A true comfort classic.</p>
+        <div class="cards-grid">
+
+          <div class="category-card" style="background-image: url(Koshari.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Koshari</h3>
+              <button class="arrow-btn" onclick="addToCart('Koshari', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="45" data-price-medium="65" data-price-large="85">
+              <option value="Small">Small — 45 EGP</option>
+              <option value="Medium">Medium — 65 EGP</option>
+              <option value="Large">Large — 85 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Ful.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Ful Medames</h3>
+              <button class="arrow-btn" onclick="addToCart('Ful Medames', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="35" data-price-medium="50" data-price-large="70">
+              <option value="Small">Small — 35 EGP</option>
+              <option value="Medium">Medium — 50 EGP</option>
+              <option value="Large">Large — 70 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Pizza.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Pizza</h3>
+              <button class="arrow-btn" onclick="addToCart('Pizza', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="80" data-price-medium="110" data-price-large="145">
+              <option value="Small">Small — 80 EGP</option>
+              <option value="Medium">Medium — 110 EGP</option>
+              <option value="Large">Large — 145 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Spaghetti.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Spaghetti</h3>
+              <button class="arrow-btn" onclick="addToCart('Spaghetti', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="70" data-price-medium="95" data-price-large="120">
+              <option value="Small">Small — 70 EGP</option>
+              <option value="Medium">Medium — 95 EGP</option>
+              <option value="Large">Large — 120 EGP</option>
+            </select>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="tt">
+        <h3>Hawawshi</h3>
+        <p>Spiced minced meat stuffed in crispy bread, baked to golden perfection. A flavorful street-food staple of Egyptian cuisine.</p>
+        <div class="cards-grid">
+
+          <div class="category-card" style="background-image: url(Noddles.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Noddles</h3>
+              <button class="arrow-btn" onclick="addToCart('Noddles', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="60" data-price-medium="80" data-price-large="100">
+              <option value="Small">Small — 60 EGP</option>
+              <option value="Medium">Medium — 80 EGP</option>
+              <option value="Large">Large — 100 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Dumblings.jpeg);">
+            <div class="card-content">
+              <h3 class="egyptian">Dumblings</h3>
+              <button class="arrow-btn" onclick="addToCart('Dumblings', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="55" data-price-medium="75" data-price-large="95">
+              <option value="Small">Small — 55 EGP</option>
+              <option value="Medium">Medium — 75 EGP</option>
+              <option value="Large">Large — 95 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Ratot.webp);">
+            <div class="card-content">
+              <h3 class="egyptian">Ratatouille</h3>
+              <button class="arrow-btn" onclick="addToCart('Ratatouille', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="75" data-price-medium="100" data-price-large="130">
+              <option value="Small">Small — 75 EGP</option>
+              <option value="Medium">Medium — 100 EGP</option>
+              <option value="Large">Large — 130 EGP</option>
+            </select>
+          </div>
+
+          <div class="category-card" style="background-image: url(Tartiflette.jpg);">
+            <div class="card-content">
+              <h3 class="egyptian">Tartiflette</h3>
+              <button class="arrow-btn" onclick="addToCart('Tartiflette', this)">
+                <span class="button">🛒 Add to Cart</span>
+              </button>
+            </div>
+            <select class="way" data-price-small="90" data-price-medium="120" data-price-large="155">
+              <option value="Small">Small — 90 EGP</option>
+              <option value="Medium">Medium — 120 EGP</option>
+              <option value="Large">Large — 155 EGP</option>
+            </select>
+          </div>
+
+        </div>
+      </article>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="light-theme.js"></script>
+    <script>
+      function getCart() {
+        return JSON.parse(localStorage.getItem('gourmetCart') || '[]');
+      }
+      function saveCart(cart) {
+        localStorage.setItem('gourmetCart', JSON.stringify(cart));
+      }
+      function updateCartBadge() {
+        const cart = getCart();
+        const total = cart.reduce((s, i) => s + i.qty, 0);
+        document.getElementById('cart-count').textContent = total;
+      }
+
+      function addToCart(name, btn) {
+        const card = btn.closest('.category-card');
+        const select = card.querySelector('select.way');
+        const selectedOption = select.options[select.selectedIndex];
+        const sizeValue = selectedOption.value; // "Small", "Medium", "Large"
+        const priceKey = 'data-price-' + sizeValue.toLowerCase();
+        const price = parseInt(select.getAttribute(priceKey));
+
+        const cart = getCart();
+        const existing = cart.find(i => i.name === name && i.size === sizeValue);
+        if (existing) {
+          existing.qty++;
+        } else {
+          cart.push({ name, size: sizeValue, price, qty: 1 });
+        }
+        saveCart(cart);
+        updateCartBadge();
+
+        // Pulse badge
+        const badge = document.getElementById('cart-count');
+        badge.classList.remove('pulse');
+        void badge.offsetWidth;
+        badge.classList.add('pulse');
+        setTimeout(() => badge.classList.remove('pulse'), 400);
+
+        showToast(`✓ ${name} (${sizeValue}) added to cart!`);
+      }
+
+      function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.style.display = 'block';
+        setTimeout(() => t.style.display = 'none', 2200);
+      }
+
+      updateCartBadge();
+    </script>
+  </body>
+</html>

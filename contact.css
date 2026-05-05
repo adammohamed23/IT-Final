@@ -1,0 +1,209 @@
+body::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  background: #000;
+  opacity: 0.9;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(images.jpg);
+  background-size: cover;
+  color: white;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 5%;
+}
+ul {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+ul li a {
+  text-align: right;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+ul li a:hover {
+  color: #404040;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.Contact-info,
+.Working-Hours,
+.Contact-form-section {
+  background-color: rgba(255, 255, 255, 0.81);
+  border-top: 4px solid #6d3b1e;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Contact-info {
+  margin-top: 25px;
+}
+
+.Contact-info h2,
+.Working-Hours h2,
+.Contact-form-section h2 {
+  color: #3d2314;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.Contact-info p,
+.Working-Hours p,
+.Contact-form-section p {
+  color: rgb(19, 22, 85);
+}
+
+.Contact-info a,
+.Working-Hours a,
+.Contact-form-section a {
+  color: rgb(11, 47, 91);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.Contact-info a:hover,
+.Working-Hours a:hover,
+.Contact-form-section a:hover {
+  color: #a54e18;
+}
+
+.Contact-form-section input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #d1cdb8;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: #fcfbf7;
+}
+
+.Contact-form-section button {
+  background-color: #3d2314;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.Contact-form-section button:hover {
+  background-color: #2b190e;
+}
+
+.Contact-info,
+.Working-Hours {
+  transform: translate(-370px, 40px);
+  margin-bottom: 50px;
+}
+.Contact-form-section {
+  transform: translate(370px, -455px);
+}
+.dev {
+  color: saddlebrown;
+}
+
+.theme-toggle {
+  margin-left: 15px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #d4af70, #b8954e);
+  color: #1a1a1a;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: none;
+  animation: toastIn 0.3s ease;
+}
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cart span.pulse {
+  animation: pulse 0.4s ease;
+}
+
+.cart {
+  cursor: pointer;
+}
+.cart span {
+  background: #d4af70;
+  color: #1a1a1a;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 2px;
+}
+

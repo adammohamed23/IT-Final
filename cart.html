@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Gourmet - Your Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body::before {
+      height: 895px
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo"><h1>GOURMET</h1></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="book-table.html">Book table</a></li>
+          <li><a href="delivery.html">Delivery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="feed-back.html">Feed Back</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button">Light Theme Off</button>
+    </div>
+  </header>
+
+  <div class="cart-page">
+    <div class="cart-header">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h1>YOUR CART</h1>
+    </div>
+
+    <div class="empty-cart" id="empty-cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <p>Your cart is empty</p>
+      <a href="menu.html">Browse Menu →</a>
+    </div>
+
+    <div id="cart-items-container">
+      <div class="cart-items" id="cart-items-list"></div>
+
+      <div class="cart-summary" id="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">0 EGP</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery fee</span>
+          <span>20 EGP</span>
+        </div>
+        <div class="summary-row total">
+          <span>TOTAL</span>
+          <span id="total">20 EGP</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">
+          <i class="fa-solid fa-bag-shopping"></i> Proceed to Checkout
+        </button>
+        <button class="clear-btn" onclick="clearCart()">
+          <i class="fa-solid fa-trash"></i> Clear Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="light-theme.js"></script>
+  <script>
+    // Food emoji map
+    const foodEmoji = {
+      'Koshari': '🍲', 'Ful Medames': '🫘', 'Pizza': '🍕',
+      'Spaghetti': '🍝', 'Noddles': '🍜', 'Dumblings': '🥟',
+      'Ratatouille': '🥘', 'Tartiflette': '🧀'
+    };
+
+    function getCart() {
+      return JSON.parse(localStorage.getItem('gourmetCart') || '[]');
+    }
+    function saveCart(cart) {
+      localStorage.setItem('gourmetCart', JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      const cart = getCart();
+      const list = document.getElementById('cart-items-list');
+      const emptyDiv = document.getElementById('empty-cart');
+      const container = document.getElementById('cart-items-container');
+      const countEl = document.getElementById('cart-count');
+
+      const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+      countEl.textContent = totalItems;
+
+      if (cart.length === 0) {
+        emptyDiv.style.display = 'block';
+        container.style.display = 'none';
+        return;
+      }
+      emptyDiv.style.display = 'none';
+      container.style.display = 'block';
+
+      list.innerHTML = '';
+      let subtotal = 0;
+
+      cart.forEach((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        const emoji = foodEmoji[item.name] || '🍽️';
+
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <div class="item-icon">${emoji}</div>
+          <div class="item-info">
+            <h3>${item.name}</h3>
+            <span class="item-size">${item.size}</span>
+          </div>
+          <div class="item-price">${item.price} EGP</div>
+          <div class="item-controls">
+            <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+            <span class="qty-display">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+            <button class="remove-btn" onclick="removeItem(${idx})"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        `;
+        list.appendChild(div);
+      });
+
+      document.getElementById('subtotal').textContent = subtotal + ' EGP';
+      document.getElementById('total').textContent = (subtotal + 20) + ' EGP';
+    }
+
+    function changeQty(idx, delta) {
+      const cart = getCart();
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function removeItem(idx) {
+      const cart = getCart();
+      cart.splice(idx, 1);
+      saveCart(cart);
+      renderCart();
+      showToast('Item removed');
+    }
+
+    function clearCart() {
+      saveCart([]);
+      renderCart();
+      showToast('Cart cleared');
+    }
+
+    function checkout() {
+      showToast('Redirecting to delivery...');
+      setTimeout(() => window.location.href = 'delivery.html', 1200);
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => t.style.display = 'none', 2500);
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        body::before {
+  height: 800px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 class="brand">GOURMET</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book-table.html">Book table</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a class="dev" href="contact.html">Contact us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href='cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          Light Theme Off
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="Contact-info">
+        <h2>Contact information🔳</h2>
+
+        <address>
+          <p>
+            &#128222;Phone:
+            <a href="tel:01080605253"> 01080605253 </a>
+          </p>
+          <p>
+            &#128231;Gmail:
+            <a href="mailto:restaurant@gmail.com"> restaurant@gmail.com </a>
+          </p>
+
+          <p>
+            &#128205;Location:
+            <a href="https://share.google/sKPyIqlLZoPniWdMT">
+              Al-Muizz Street - Cairo
+            </a>
+          </p>
+        </address>
+      </section>
+
+      <section class="Working-Hours">
+        <h2>Working Hours🕑</h2>
+
+        <p>Saturday - Thursday : 10AM - 1️AM</p>
+
+        <p>Friday : 2PM - 1AM</p>
+      </section>
+
+      <section class="Contact-form-section">
+        <h2>Send Us a Message💬</h2>
+
+        <form>
+          <label for="name">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          /><br /><br />
+
+          <label for="phone">Phone:</label><br />
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+          /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Write your message here"
+          ></textarea
+          ><br /><br />
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026</p>
+    </footer>
+    <script src="light-theme.js"></script>
+    <script src="cart-badge.js"></script>
+  </body>
+</html>

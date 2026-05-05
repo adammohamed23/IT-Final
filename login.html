@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gourmet - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="brand">
+            <h1>GOURMET</h1>
+            <p>Taste The World</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter youor name" required>
+            </div>
+            
+            <div class="input-group">
+                <label>password</label>
+                <input type="password" id="password" placeholder="••••" required>
+            </div>
+
+            <button type="submit" id="submitBtn">Login</button>
+            <p id="message" class="error-msg"></p>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <ul class="feature-item">
+                <li>&copy; 2026 GOURMET. All Rights Reserved |</li>
+                <li>Usage conditions |</li>
+                <li>Terms and conditios |</li>
+                <li>Privacy Policy </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+    <script src="light-theme.js"></script>
+    
+</body>
+</html>

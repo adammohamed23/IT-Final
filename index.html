@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gourmet - Taste the World | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body::before {
+            height: 750px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                    <h1 class="brand">GOURMET</h1>
+            </div>          
+            <nav>
+                <ul>
+                    <li><a class="dev" href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="book-table.html">Book table</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="feed-back.html">Feed Back</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" type="button">Light Theme Off</button>
+        </div>
+    </header>
+        <section class="body">
+            <div>
+                <div class="body-content">
+                    <h1 class="title">Four Kitchens<br>One Experience.</h1>
+                    <p class="description">Discover and Taste the meals arround the world,<br> crafted by expert chefs and delivered to your door.</p>
+                        <button class="order" class="btn btn-dark"><a href="delivery.html" class="button">Order Now →</a></button>
+                        <button class="btn btn-outline"><a href="menu.html" class="button">Explore Menu</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="kitchen">
+            <div class="cards-grid">
+                <div class="category-card" style="background-image:url(egyptian-dish.png);">
+                    <div class="card-content">
+                        <h3 class="egyptian">Egyptian kitchen<br><span>egyptian kitchen</span></h3>
+                        <button class="arrow-btn"><a class="button" href="menu.html">→</a></button>
+                    </div>
+                </div>
+                <div class="category-card" style="background-image:url(french-dish.png);">
+                    <div class="card-content">
+                        <h3 class="french">French kitchen<br><span>french kitchen</span></h3>
+                        <button class="arrow-btn"><a class="button" href="menu.html">→</a></button>
+                    </div>
+                </div>
+                <div class="category-card" style="background-image:url(chinese-dish.png);">
+                    <div class="card-content">
+                        <h3 class="chinese">Chinese kitchen<br><span>chinese kitchen</span></h3>
+                        <button class="arrow-btn"><a class="button" href="menu.html">→</a></button>
+                    </div>  
+                </div>
+                <div class="category-card" style="background-image:url(italian-dish.png);">
+                    <div class="card-content">
+                        <h3 class="italian">Italian kitchen<br><span>italian kitchen</span></h3>
+                        <button class="arrow-btn"><a class="button" href="menu.html">→</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer>
+        <div class="footer-container">
+            <ul class="feature-item">
+                <li>&copy; 2026 GOURMET. All Rights Reserved |</li>
+                <li>Usage conditions |</li>
+                <li>Terms and conditios |</li>
+                <li>Privacy Policy </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="light-theme.js"></script>
+    <script src="cart-badge.js"></script>
+</body>
+</html>

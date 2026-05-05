@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="delivery.css" />
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <style>
+      body::before {
+  height: 750px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div>
+          <h1>GOURMET</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book-table.html">Book table</a></li>
+            <li><a class="dev" href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href = 'cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          Light Theme Off
+        </button>
+      </div>
+    </header>
+    <h2>Delivery address</h2>
+
+    <br />
+    <div>
+      <fieldset class="nn">
+        <legend class="PP">Important Information</legend>
+        <form class="mm">
+          <div class="input-row">
+            <div class="input-group">
+              <label for="1" class="ff">Full Name :</label>
+              <input
+                class="xx"
+                id="1"
+                type="text"
+                required
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="input-group">
+              <label for="2" class="ff">Street Address :</label>
+              <input
+                class="xx"
+                type="text"
+                id="2"
+                required
+                placeholder="Enter your address"
+              />
+            </div>
+            <div class="input-group">
+              <label for="3" class="ff">City/State :</label>
+              <input
+                class="xx"
+                id="3"
+                type="text"
+                required
+                placeholder=" Enter your city"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="input-row">
+            <div class="input-group">
+              <label for="4" class="ff">Zip Code :</label>
+              <input
+                class="xx"
+                id="4"
+                type="text"
+                placeholder="Enter your zip coda"
+              />
+            </div>
+            <div class="input-group">
+              <label for="5" class="ff">Delivery Notes :</label>
+              <input
+                class="xx"
+                id="5"
+                type="text"
+                placeholder="Remakable Place"
+              />
+            </div>
+            <div class="input-group">
+              <label for="6" class="ff">Phone Number :</label>
+              <input
+                class="xx"
+                id="6"
+                type="text"
+                required
+                placeholder="Please enter your phone number"
+              />
+            </div>
+          </div>
+          <br />
+          <h1>please enter the payment way</h1>
+          <select class="way">
+            <option>Cash</option>
+            <option>Visa</option>
+          </select>
+          <br />
+          <br />
+          <label class="ff" for="8"></label>
+          <input class="xy" id="8" type="submit" />
+          <br />
+        </form>
+      </fieldset>
+    </div>
+    <script src="light-theme.js"></script>
+    <script src="cart-badge.js"></script>
+  </body>
+</html>

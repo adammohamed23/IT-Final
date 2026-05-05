@@ -1,0 +1,198 @@
+body::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  background: #000;
+  opacity: 0.95;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(images.jpg);
+  background-size: cover;
+  color: white;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 5%;
+}
+ul {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+ul li a {
+  text-align: right;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+ul li a:hover {
+  color: #404040;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/*  my code */
+
+h2 {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+.ff {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.xx {
+  width: 400px;
+  height: 40px;
+  border: transparent;
+  margin-right: 50px;
+  font-size: 26px;
+}
+
+.xy {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+.PP {
+  font-size: 30px;
+  color: green;
+}
+.way {
+  width: 100px;
+  font-size: 30px;
+  background-color: #862e05;
+  color: white;
+  border: none;
+  padding: 12.8px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.nn {
+  border: solid white;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  gap: 40px;
+}
+.dev {
+  color: saddlebrown;
+}
+.theme-toggle {
+  margin-left: 15px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+.xy {
+  background-color: #862e05;
+  color: white;
+  border: none;
+  padding: 12.8px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #d4af70, #b8954e);
+  color: #1a1a1a;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: none;
+  animation: toastIn 0.3s ease;
+}
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cart span.pulse {
+  animation: pulse 0.4s ease;
+}
+
+.cart {
+  cursor: pointer;
+}
+.cart span {
+  background: #d4af70;
+  color: #1a1a1a;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 2px;
+}
+

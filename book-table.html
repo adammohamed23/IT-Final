@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gourmet - Taste the World | Book Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book-table.css" />
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body::before {
+        height: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 class="brand">GOURMET</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="dev" href="book-table.html">Book table</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href='cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          Light Theme Off
+        </button>
+      </div>
+    </header>
+
+    <h2>Reserve a Table</h2>
+    <p>Select your details and we will try to get the best seats for you.</p>
+
+    <form>
+      <div class="form-container">
+        <div class="form-container">
+          <div>
+            <label for="pt-size">Party Size:</label><br />
+            <select id="pt-size">
+              <option value="1" selected>1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+            </select>
+          </div>
+          <div>
+            <label for="reservation-date">Date:</label><br />
+            <input type="date" id="reservation-date" name="reservation-date" />
+          </div>
+          <div>
+            <label for="time">Time:</label><br />
+            <select id="time">
+              <option value="5pm" selected>5 PM</option>
+              <option value="6pm">6 PM</option>
+              <option value="7pm">7 PM</option>
+              <option value="8pm">8 PM</option>
+              <option value="9pm">9 PM</option>
+              <option value="10pm">10 PM</option>
+            </select>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              onclick="
+                alert(
+                  'Online reservations are currently unavailable\nTo make a reservation, contact us directly by phone.',
+                )
+              "
+            >
+              Find Table
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="light-theme.js"></script>
+    <script src="cart-badge.js"></script>
+  </body>
+</html>

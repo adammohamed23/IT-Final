@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="feed-back.css" />
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Feed back</title>
+    <style>
+      body::before {
+        height: 890px
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 class="brand">GOURMET</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book-table.html">Book table</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a class="dev" href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href='cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          Light Theme Off
+        </button>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="ti">Feed back !</h1>
+      <p>
+        We welcome your questions and inquiries about the historical content on
+        our site. You can fill out the form below and we will respond as soon as
+        possible.
+      </p>
+
+      <form
+        id="contactUsForm"
+        class="contactUs-form"
+        action="thankyou.html"
+        method="get"
+      >
+        <div class="contact">
+          <label for="name" class="title">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="contact">
+          <label for="email" class="title">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="title">
+          <label>How would you rate your experience with us?</label>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1">★</label>
+          </div>
+        </div>
+
+        <div class="contact">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  <script src="light-theme.js"></script>
+  <script src="cart-badge.js"></script>
+  </body>
+</html>

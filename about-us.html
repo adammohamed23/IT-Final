@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gourmet - Taste the World | Book Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about-us.css" />
+    <link rel="stylesheet" href="light-theme.css" id="light-theme-link" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body::before {
+      height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 class="brand">GOURMET</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book-table.html">Book table</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a class="dev" href="about-us.html">About Us</a></li>
+            <li><a href="feed-back.html">Feed Back</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <div class="cart" onclick="window.location.href = 'cart.html'">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          Light Theme Off
+        </button>
+      </div>
+    </header>
+
+    <div class="container text">
+      <h2>About Us</h2>
+      <p>Our food is delicious and high quality</p>
+
+      <h2>location</h2>
+      <p>Beside Helwan University</p>
+
+      <h2>Contact</h2>
+      <ul class="text">
+        <li><strong>Phone:</strong> 01122445566</li>
+        <li><strong>Email:</strong> Ahmed@gmail.com</li>
+      </ul>
+
+      <h2>Working times</h2>
+      <p>Open 24 hours</p>
+    </div>
+    <script src="light-theme.js"></script>
+    <script src="cart-badge.js"></script>
+  </body>
+</html>
